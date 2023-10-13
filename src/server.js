@@ -5,8 +5,9 @@ const main = async () => {
   try {
     const venombot = await VenomBot.getInstance().init({
       session: 'Delícias da Neide',
-      headless: true,
-      useChrome: false,
+      headless: false,
+      useChrome: true,
+      multidevice: true,
     })
 
     venombot.onMessage(async (message) => {
