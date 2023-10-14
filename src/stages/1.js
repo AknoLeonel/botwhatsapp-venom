@@ -34,7 +34,7 @@ export const stageOne = {
 
 const options = {
   1: () => {
-    let message = '🚨  CARDÁPIO  🚨\n\n'
+    let message = '🚨  PLANOS  🚨\n\n'
 
     Object.keys(menu).forEach((value) => {
       message += `${numbers[value]} - _${menu[value].description}_ \n`
@@ -47,9 +47,9 @@ const options = {
   },
   2: () => {
     const message =
-      '\n-----------------------------------\n1️⃣ - ```FAZER PEDIDO``` \n0️⃣ - ```FALAR COM ATENDENTE```\n\n' +
+      '\n-----------------------------------\n1️⃣ - ```Enviar Formulario``` \n0️⃣ - ```FALAR COM ATENDENTE```\n\n' +
       neighborhoods +
-      '\n-----------------------------------\n1️⃣ - ```FAZER PEDIDO``` \n0️⃣ - ```FALAR COM ATENDENTE``` '
+      '\n-----------------------------------\n1️⃣ - ```Enviar Formulario``` \n0️⃣ - ```FALAR COM ATENDENTE``` '
 
     return {
       message,

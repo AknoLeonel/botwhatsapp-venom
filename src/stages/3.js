@@ -7,7 +7,7 @@ export const stageThree = {
     storage[from].address = message
     storage[from].stage = STAGES.PEDIDO
 
-    let msg = 'Pedido *CANCELADO* com sucesso. \n Volte Sempre!'
+    let msg = 'Sessão *CANCELADA* com sucesso. \n Volte Sempre!'
     if (message === '*') {
       storage[from].stage = STAGES.INICIAL
     } else {
@@ -17,14 +17,14 @@ export const stageThree = {
       const total = storage[from].itens.length
 
       msg =
-        `🗒️ *RESUMO DO PEDIDO*: \n\n🧁 Sabores: *${desserts}* \n🚚 Taxa de entrega: *a confirmar*. \n📍 Endereço: *${message}* \n💰 Valor dos bolos: *${
+        `🗒️ *Em andamento*: \n\n🧁 Informações: *${desserts}* \n🚚 Plano: *a confirmar*. \n📍 Endereço: *${message}* \n💰 Valor : *${
           total * 6
-        },00 reais*. \n⏳ Tempo de entrega: *50 minutos*. \n\n` +
-        '🔊 ```Agora, informe a forma de pagamento e se vai precisar de troco, por gentileza.```'
+        },00 reais*. \n⏳ Tempo de espera: *10 minutos*. \n\n` +
+        '🔊 ```Agora, informe a forma de pagamento, por gentileza.```'
     }
 
     await VenomBot.getInstance().sendText({ to: from, message: msg })
 
-    // return '✅ *Prontinho, pedido feito!* \n\nAgora, se você ainda não sabe o valor da taxa de entrega para sua região, vou te passar para um atendente para que ele verique o valor da *taxa de entrega*. \n\n⏳ *Aguarde um instante*.'
+    // return '✅ *Prontinho, plano confirmado!* \n\nAgora, se você ainda não terminou sua sessão *. \n\n⏳ *Aguarde um instante*.'
   },
 }

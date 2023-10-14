@@ -10,11 +10,11 @@ export const initialStage = {
 
     const message = `
       👋 Olá, como vai?
-      Eu sou Carlos, o *assistente virtual* da ${venombot.getSessionName}.
+      Eu sou o *assistente virtual* da ${venombot.getSessionName}.
       *Posso te ajudar?* 🙋‍♂️
       -----------------------------------
       1️⃣ - FAZER PEDIDO
-      2️⃣ - VERIFICAR TAXA DE ENTREGA
+      2️⃣ - VERIFICAR PLANO DE SAÚDE
       0️⃣ - FALAR COM ATENDENTE
     `
     await venombot.sendText({ to: from, message })

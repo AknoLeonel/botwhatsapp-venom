@@ -18,9 +18,9 @@ export const stageTwo = {
         storage[params.from].stage = option.nextStage
       } else {
         msg =
-          `✅ *${menu[message].description}* adicionado com sucesso! \n\n` +
+          `✅ *${menu[message].description}* Confirmado! \n\n` +
           '```Digite outra opção```: \n\n' +
-          '\n-----------------------------------\n#️⃣ - ```FINALIZAR pedido``` \n*️⃣ - ```CANCELAR pedido```'
+          '\n-----------------------------------\n#️⃣ - ```FINALIZAR sessão``` \n*️⃣ - ```CANCELAR sessão```'
         storage[params.from].itens.push(menu[message])
       }
 
@@ -36,7 +36,7 @@ export const stageTwo = {
 const options = {
   '*': () => {
     const message =
-      '🔴 Pedido *CANCELADO* com sucesso. \n\n ```Volte Sempre!```'
+      '🔴 Sessão *CANCELADO* com sucesso. \n\n ```Volte Sempre!```'
 
     return {
       message,
@@ -45,8 +45,8 @@ const options = {
   },
   '#': () => {
     const message =
-      '🗺️ Agora, informe o *ENDEREÇO*. \n ( ```Rua, Número, Bairro``` ) \n\n ' +
-      '\n-----------------------------------\n*️⃣ - ```CANCELAR pedido```'
+      '🗺️ Agora, informe as *informações*. \n ( ```Email, Telefone, Plano``` ) \n\n ' +
+      '\n-----------------------------------\n*️⃣ - ```CANCELAR Sessão```'
 
     return {
       message,
